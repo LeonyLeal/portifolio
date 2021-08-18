@@ -1,6 +1,6 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from 'styled-components'
 
-const fadeIn = keyframes `
+const fadeIn = keyframes`
 0%{
     opacity: 0.7;
 }
@@ -9,63 +9,71 @@ const fadeIn = keyframes `
 }
 `
 
-
-
-export const SkillsContainer = styled.div `
+export const SkillsContainer = styled.section`
+min-height: 100vh;
+  margin: 10% 0;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: stretch;
 `
 
 export const CardWrapper = styled.div`
-display: grid;
-justify-content:space-around;
-
+  margin-top: 1em;
+  padding: 1em;
+  display: grid;
+  align-self: center;
+  border-radius: 25px;
+  background: #505050;
+  background-clip: border-box;
+  justify-content: center;
 `
 
 export const Card = styled.div`
-display: flex;
-background-color: #444444;
-width: 275px;
-height:450px;
-flex-direction: column;
-margin: 2em 0;
-border-radius: 1em;
-@media (min-width:1100px){
-grid-row: 1/4;
-}
+  display: flex;
+  background-color: #444444;
+  width: 275px;
+  height: 450px;
+  flex-direction: column;
+  animation-name: ${fadeIn};
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.3s;
+  margin: 2em;
+  border-radius: 1em;
+  @media (min-width: 1100px) {
+    grid-row: 1/4;
+  }
 
-    &#card-1{
-    :hover{
-        animation-name: ${fadeIn};
-	    animation-timing-function: ease-in;
-	    animation-duration: .3s;
-        background: linear-gradient(180deg, #EA3A46 0%, #BF323C 100%);
-        
+  &#card-1 {
+    :hover {
+      animation-name: ${fadeIn};
+      animation-timing-function: ease-in;
+      animation-duration: 0.3s;
+      background: linear-gradient(180deg, #ea3a46 0%, #bf323c 100%);
     }
-}
-    &#card-2{
-    :hover{
-        animation-name: ${fadeIn};
-	    animation-timing-function: ease-in;
-	    animation-duration: .3s;
-        background: linear-gradient(180deg, #55BAA3 0%, #44A891 100%);;
-        
+  }
+  &#card-2 {
+    :hover {
+      animation-name: ${fadeIn};
+      animation-timing-function: ease-in-out;
+      animation-duration: 0.3s;
+      background: linear-gradient(180deg, #55baa3 0%, #44a891 100%);
     }
-}
-    &#card-3{
-    :hover{
-        animation-name: ${fadeIn};
-	    animation-timing-function: ease-in;
-	    animation-duration: .3s;
-        background: linear-gradient(180deg, #27ABEE 0%, #228EC5 100%);
-        
+  }
+  &#card-3 {
+    :hover {
+      animation-name: ${fadeIn};
+      animation-timing-function: ease-in;
+      animation-duration: 0.3s;
+      background: linear-gradient(180deg, #27abee 0%, #228ec5 100%);
     }
-}
-    &#card-4{
-    :hover{
-        animation-name: ${fadeIn};
-	    animation-timing-function: ease-in;
-	    animation-duration: .3s;
-        background: linear-gradient(180deg, #8765DE 0%, #694CB3 100%);
-        
+  }
+  &#card-4 {
+    :hover {
+      animation-name: ${fadeIn};
+      animation-timing-function: ease-in;
+      animation-duration: 0.3s;
+      background: linear-gradient(180deg, #8765de 0%, #694cb3 100%);
     }
-    }
+  }
 `

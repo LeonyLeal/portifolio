@@ -1,23 +1,22 @@
 import styled, { keyframes } from 'styled-components'
 
-
-
 const BubblesAni = keyframes`
  0% {
+    bottom: -1.5em;
     opacity: 0;
     visibility: visible;
 }
  10% {
-    opacity: 0.2;
+    bottom: -1.5em;
+    opacity: 0;
     visibility: visible;
-}
-20%{
-    opacity: 0.8;
 }
 30%{
     opacity: 1;
 }
-
+75%{
+    opacity: 1;
+}
 80%{
     opacity: 0.6;
 }
@@ -59,23 +58,19 @@ export const Bubble = styled.div`
   border-radius: 100%;
   background: radial-gradient(50% 50% at 50% 50%, #cc0092 0%, #ff4dcc 87.5%);
   opacity: 1;
-animation: ${BubblesAni} 10s linear infinite,
+  animation: ${BubblesAni} 5s linear infinite,
     ${sideWays} 0.9s ease-in-out alternate infinite;
 
   &#Bubble1 {
-      height: 1.5em;
-      width: 1.5em;
-    bottom: -25%;
+    bottom: -10%;
     left: 25%;
     @media (min-width: 600px) {
-      bottom: 25%;
+      bottom: 0%;
       left: 12%;
     }
   }
   &#Bubble2 {
-      height: 4em;
-      width: 4em;
-    bottom: 0%;
+    bottom: -10%;
     left: 25%;
     @media (min-width: 600px) {
       bottom: 0%;
@@ -83,60 +78,50 @@ animation: ${BubblesAni} 10s linear infinite,
     }
   }
   &#Bubble3 {
-    bottom: 10%;
+    bottom: -10%;
     left: 50%;
     @media (min-width: 600px) {
-      bottom: 10%;
+      bottom: 0%;
       left: 40%;
     }
   }
   &#Bubble4 {
-    bottom: 5%;
+    bottom: 0%;
     left: 80%;
     @media (min-width: 600px) {
       visibility: visible;
-      bottom: 5%;
+      bottom: 0%;
       left: 55%;
     }
   }
   &#Bubble5 {
-      height: 1.2em;
-      width: 1.2em;
     visibility: hidden;
-    bottom: 30%;
+
     @media (min-width: 600px) {
       visibility: visible;
-      bottom: 30%;
+      bottom: 0%;
       left: 75%;
     }
   }
   &#Bubble6 {
-      height: 0.7em;
-      width: 0.7em;
-    bottom: 2%;
     @media (min-width: 600px) {
       visibility: hidden;
       visibility: visible;
-      bottom: 2%;
+      bottom: 0%;
       left: 80%;
     }
   }
   &#Bubble7 {
-    width: 2em;
-    height: 2em;
     visibility: hidden;
-    bottom: 14%;
     @media (min-width: 600px) {
       visibility: visible;
-      bottom: 14%;
+      bottom: 0%;
       left: 90%;
     }
   }
 `
 
 export const AboutMeWrapper = styled.div`
-
-  position: relative;
   z-index: 10;
   @media (min-width: 600px) {
     display: flex;
@@ -168,8 +153,6 @@ export const Carousel = styled.p`
 `
 
 export const Content = styled.div`
-    width: 50%;
-    margin:0 auto;
   @media (min-width: 600px) {
     display: flex;
     flex-direction: column;
@@ -178,18 +161,11 @@ export const Content = styled.div`
     justify-content: center;
     align-items: flex-start;
   }
-  @media (min-width:1100px){
-    background: rgba(37,37,37, 0.2);
-    border-radius: 25px;
-  }
 `
 
-export const ContentWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  align-content: stretch;
-  min-height: 100vh;
+export const ContentWrapper = styled.div`
+  min-height: 80vh;
+
   > #Who {
     margin-top: 10%;
   }
@@ -221,14 +197,15 @@ export const Name = styled.h1`
   }
 `
 export const Profile = styled.img`
-  min-width: 150px;
-  max-height: auto;
+  min-width: auto;
+  max-width: 200px;
   border-radius: 1.5em;
-  border: 5px solid #f2f2f2;
+  border: 5px solid #252525;
 
   @media (min-width: 600px) {
     max-width: auto;
-    max-height: 362px;
+
+    max-height: 362;
   }
 `
 
