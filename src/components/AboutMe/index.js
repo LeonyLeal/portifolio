@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Perfil from '../../img/Perfil.png'
 import { Span, Text, Title } from '../../styles/GlobalStyles'
 import {
@@ -16,6 +16,42 @@ import {
 } from './style'
 
 function AboutMe() {
+
+  
+  const word = [ 
+    'Front-end', 
+    'Back-end', 
+    'Designer'
+  ]; //Array das palavras
+   
+  
+  const [index, setindex] = useState(0); //index para indicar a posição do Array Word[index]
+  const [words, setWords] = useState(''); // estado inicial das palavras
+
+  const carouselWord = () => {
+    const pos = index + 1 === word.length 
+      ? 0 
+      : index + 1; //se o index + 1 for igual ao tamanho do array == 3, então vai pra zero, caso contrario add +1
+    setindex(pos); //addicionando a constante na posição do array
+    document.getElementById("Carousel").animate(
+      [{opacity:0,transform:"translate(-1em, 0)" },{opacity:1, transform:"translate(0, 0)"}],
+      {duration: 900}
+    ) //Animação de opacidade e indo da esquerda pra direita
+    document.getElementById("Carousel").animate(
+      [{opacity:1,transform:"translate(0, 0)" },{opacity:0, transform:"translate(1em, 0)"}],
+      {delay: 2200, duration: 800},
+    )
+  }
+
+  setTimeout(carouselWord, 2900) // delay para cada iteração
+  
+
+  useEffect(() => {
+    setWords(word[index]);
+    // eslint-disable-next-line
+  }, [index]);
+
+
   return (
     <ContentWrapper id="Section-A">
       <Title id="Who">Quem?</Title>
@@ -34,18 +70,20 @@ function AboutMe() {
             </TextWrapper>
             <ProfileWrapper id="DivWrapper">
               <Profile src={Perfil} id="Profile_Photo"></Profile>
-              <Carousel id="Carousel">Front-end</Carousel>
+              <Carousel id="Carousel">{words}</Carousel>
             </ProfileWrapper>
           </AboutMeWrapper>
         </Content>
         <Bubbles id="Bubbles">
-          <Bubble id="Bubble1" />
-          <Bubble id="Bubble2" />
-          <Bubble id="Bubble3" />
-          <Bubble id="Bubble4" />
-          <Bubble id="Bubble5" />
-          <Bubble id="Bubble6" />
-          <Bubble id="Bubble7" />
+          <Bubble id="Bubble" />
+          <Bubble id="Bubble" />
+          <Bubble id="Bubble" />
+          <Bubble id="Bubble" />
+          <Bubble id="Bubble" />
+          <Bubble id="Bubble" />
+          <Bubble id="Bubble" />
+          <Bubble id="Bubble" />
+          <Bubble id="Bubble" />
         </Bubbles>
       </Background>
     </ContentWrapper>

@@ -11,9 +11,9 @@ function App() {
     <>
       <Navbar />
       <AboutMe />
-      <Socials />
       <Skills />
       <Projectxs />
+      <Socials />
       <GlobalStyles />
     </>
   )

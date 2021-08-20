@@ -22,6 +22,9 @@ export const GlobalStyles = createGlobalStyle`
   background: #f2f2f2;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 body{
     box-sizing: border-box;

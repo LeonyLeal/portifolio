@@ -1,14 +1,12 @@
 import styled, { keyframes } from 'styled-components'
 
-
-
 const BubblesAni = keyframes`
  0% {
-    opacity: 0;
+    opacity: 0.2;
     visibility: visible;
 }
  10% {
-    opacity: 0.2;
+    opacity: 0.5;
     visibility: visible;
 }
 20%{
@@ -22,34 +20,35 @@ const BubblesAni = keyframes`
     opacity: 0.6;
 }
 97%{
-    opacity: 0;
+    opacity: 0.0;
 }
 100% {
     bottom: 90%;
-    opacity: 0;
+    opacity: 0.0;
 }
 `
 const sideWays = keyframes`
        0% { 
-        margin-left:0em;
+        margin:0 0em;
     }
     100% { 
-        margin-left:3em;
+        margin:0 3em;
     }
-}
-`
+}`
 
 export const Bubbles = styled.div`
+  display: flex;
+  min-height: 35em;
+  top: 30%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 100%;
-  height: 75%;
   overflow: hidden;
-  top: 16%;
   z-index: 1;
-  @media (min-width: 600px) {
-    height: 60%;
-    top: 30%;
-  }
 `
 
 export const Bubble = styled.div`
@@ -59,83 +58,125 @@ export const Bubble = styled.div`
   border-radius: 100%;
   background: radial-gradient(50% 50% at 50% 50%, #cc0092 0%, #ff4dcc 87.5%);
   opacity: 1;
-animation: ${BubblesAni} 10s linear infinite,
-    ${sideWays} 0.9s ease-in-out alternate infinite;
+  animation: ${BubblesAni} 6s linear infinite,
+    ${sideWays} 1s ease-in-out alternate infinite;
 
-  &#Bubble1 {
-      height: 1.5em;
-      width: 1.5em;
+  &#Bubble:nth-child(1) {
+    height: 1.5em;
+    width: 1.5em;
+
+    bottom: -10%;
+    left: 5%;
+    animation-delay: 0.3s;
+    @media (min-width: 600px) {
+      left: 15%;
+    }
+  }
+  &#Bubble:nth-child(2) {
+    visibility: hidden !important;
+
+    height: 1em;
+    width: 1em;
+
     bottom: -25%;
-    left: 25%;
+    left: 15%;
+    animation-delay: 0.6s;
+
     @media (min-width: 600px) {
-      bottom: 25%;
-      left: 12%;
+      visibility: visible !important;
     }
   }
-  &#Bubble2 {
-      height: 4em;
-      width: 4em;
-    bottom: 0%;
-    left: 25%;
+  &#Bubble:nth-child(3) {
+    height: 2.5em;
+    width: 2.5em;
+
+    bottom: -10%;
+    left: 15%;
+    animation-delay: 1.4s;
     @media (min-width: 600px) {
-      bottom: 0%;
-      left: 25%;
+      left: 30%;
     }
   }
-  &#Bubble3 {
-    bottom: 10%;
+  &#Bubble:nth-child(4) {
+    visibility: hidden !important;
+    height: 1.4em;
+    width: 1.4em;
+
+    bottom: -5%;
+    left: 30%;
+    animation-delay: 1s;
+
+    @media (min-width: 600px) {
+      visibility: visible;
+    }
+  }
+  &#Bubble:nth-child(5) {
+    visibility: hidden !important;
+
+    height: .9em;
+    width: .9em;
+
+    bottom: -30%;
     left: 50%;
+    animation-delay: 0.7s;
     @media (min-width: 600px) {
-      bottom: 10%;
-      left: 40%;
+      visibility: visible !important;
     }
   }
-  &#Bubble4 {
-    bottom: 5%;
-    left: 80%;
+  &#Bubble:nth-child(6) {
+    height: 1.8em;
+    width: 1.8em;
+
+    bottom: -7%;
+    left: auto;
+    right: 40%;
+    animation-delay: 1.2s;
     @media (min-width: 600px) {
-      visibility: visible;
-      bottom: 5%;
-      left: 55%;
+      right: 30%;
     }
   }
-  &#Bubble5 {
-      height: 1.2em;
-      width: 1.2em;
-    visibility: hidden;
-    bottom: 30%;
+  &#Bubble:nth-child(7) {
+    visibility: hidden !important;
+
+    height: 4em;
+    width: 4em;
+
+    bottom: -15%;
+    left: auto;
+    right: 25%;
+    animation-delay: 4s;
     @media (min-width: 600px) {
-      visibility: visible;
-      bottom: 30%;
-      left: 75%;
+      visibility: visible !important;
     }
   }
-  &#Bubble6 {
-      height: 0.7em;
-      width: 0.7em;
-    bottom: 2%;
+  &#Bubble:nth-child(8) {
+    height: 1.6em;
+    width: 1.6em;
+
+    bottom: -8%;
+    left: auto;
+    right: 5%;
+    animation-delay: 6s;
     @media (min-width: 600px) {
-      visibility: hidden;
-      visibility: visible;
-      bottom: 2%;
-      left: 80%;
+      right: 15%;
     }
   }
-  &#Bubble7 {
-    width: 2em;
-    height: 2em;
-    visibility: hidden;
-    bottom: 14%;
+  &#Bubble:nth-child(9) {
+    visibility: hidden !important;
+    height: 1em;
+    width: 1em;
+
+    right: 15%;
+    bottom: -50%;
+    animation-delay: 2s;
+
     @media (min-width: 600px) {
-      visibility: visible;
-      bottom: 14%;
-      left: 90%;
+      visibility: visible !important;
     }
   }
 `
 
 export const AboutMeWrapper = styled.div`
-
   position: relative;
   z-index: 10;
   @media (min-width: 600px) {
@@ -161,15 +202,15 @@ export const Background = styled.div`
 `
 
 export const Carousel = styled.p`
-  margin: 0;
-  padding-bottom: 3em;
+  margin: 0 auto;
+  padding-bottom: 1em;
   font-weight: lighter;
   font-size: 2rem;
+  animation: all 1s ease-in-out;
 `
 
 export const Content = styled.div`
-    width: 50%;
-    margin:0 auto;
+  margin: 0 auto;
   @media (min-width: 600px) {
     display: flex;
     flex-direction: column;
@@ -177,10 +218,6 @@ export const Content = styled.div`
     align-content: center;
     justify-content: center;
     align-items: flex-start;
-  }
-  @media (min-width:1100px){
-    background: rgba(37,37,37, 0.2);
-    border-radius: 25px;
   }
 `
 
