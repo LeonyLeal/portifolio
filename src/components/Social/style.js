@@ -12,6 +12,7 @@ import LinkedinSVG from '../../img/linkedin.svg'
 import LinkedinFillSVG from '../../img/linkedinFill.svg'
 import TwitterSVG from '../../img/twitter.svg'
 import TwitterFillSVG from '../../img/twitterFill.svg'
+import { colors } from '../../styles/GlobalStyles'
 
 export const SocialContainer = styled.section`
   min-height: 20vh;
@@ -34,44 +35,44 @@ export const SociaLink = styled.a`
   cursor: pointer;
   background-position: start center;
   background-repeat: no-repeat;
-  color: #f2f2f2;
+  color: ${colors.Secondary};
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0.3em 1em;
   transition: all 0.5s ease-in-out;
 
-  &#social-1 {
+  &:nth-child(1) {
     background-image: url(${FacebookSVG});
 
     :hover {
       background-image: url(${FacebookFillSVG});
     }
   }
-  &#social-2 {
+  &:nth-child(2) {
     background-image: url(${FigmaSVG});
     :hover {
       background-image: url(${FigmaFillSVG});
     }
   }
-  &#social-3 {
+  &:nth-child(3) {
     background-image: url(${GithubSVG});
     :hover {
       background-image: url(${GithubFillSVG});
     }
   }
-  &#social-4 {
+  &:nth-child(4) {
     background-image: url(${InstagramSVG});
     :hover {
       background-image: url(${InstagramFillSVG});
     }
   }
-  &#social-5 {
+  &:nth-child(5) {
     background-image: url(${LinkedinSVG});
     :hover {
       background-image: url(${LinkedinFillSVG});
     }
   }
-  &#social-6 {
+  &:nth-child(6) {
     background-image: url(${TwitterSVG});
     :hover {
       background-image: url(${TwitterFillSVG});

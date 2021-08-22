@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { colors } from '../../styles/GlobalStyles'
 import BurgerSVG from '../../img/BurgerSVG.svg'
 import ThemeSVG from '../../img/ThemeSVG.svg'
 
@@ -19,10 +19,6 @@ export const Menu = styled.div`
   display: flex;
   min-height: 2.75em;
   margin: 0 3.125em;
-  background: transparent;
-  border: solid 1px rgba(255, 0, 184, 0) 0%, #ff00b8 17.19%, #ff007a 80.73%,
-    rgba(255, 0, 122, 0) 100%;
-  border-radius: 0 0 10px 10px;
   width: fit-content;
   text-align: center;
   align-items: center;
@@ -34,7 +30,7 @@ export const Menu = styled.div`
   }
 `
 export const MenuLink = styled.a`
-  color: #f2f2f2;
+  color: ${colors.Secondary};
   padding: 0 10px;
   cursor: pointer;
   text-decoration: none;

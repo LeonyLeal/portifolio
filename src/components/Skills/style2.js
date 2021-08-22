@@ -1,4 +1,6 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components"
+
+import { colors } from "../../styles/GlobalStyles"
 
 import cardRedSVG from '../../img/card_red.svg'
 import cardGreenSVG from '../../img/card_green.svg'
@@ -9,16 +11,13 @@ import designSVG from '../../img/design.svg'
 import mobileSVG from '../../img/mobile.svg'
 import reactSVG from '../../img/react.svg'
 
-import {colors} from '../../styles/GlobalStyles'
-
 
 //Keyframe Animations
 const InOut = keyframes`
 0%{
-    height: 6em;
-    width: 6em;
-    border-radius: 50%;
-   
+    height: 0;
+    width: 100%;
+    border-radius:1em;
 }
 100%{
     height: 100%;
@@ -30,15 +29,15 @@ const InOut = keyframes`
 
 const OutIn = keyframes`
 0%{
-  height: 100%;
+    height: 100%;
     width: 100%;
     z-index:-100;
     border-radius:1em;
 }
 100%{
-    height: 6em;
-    width: 6em;
-    border-radius: 50%;
+    height: 0;
+    width: 100%;
+   
 }
 `
 
@@ -72,7 +71,7 @@ export const CardWrapper = styled.div`
 export const Card = styled.div`
   display: flex;
   word-wrap: break-word;
-  justify-content: flex-start;
+  justify-content: flex-end;
   background: ${colors.Primary};
   width: 17.18em;
   height: 28.12em;
@@ -87,7 +86,7 @@ export const Card = styled.div`
     grid-row: 1/4;
   }
 
-    &#card:nth-child(1){background: url(${cardRedSVG})    no-repeat bottom center,${colors.Primary};}
+  &#card:nth-child(1){background: url(${cardRedSVG})    no-repeat bottom center,${colors.Primary};}
     &#card:nth-child(2){background: url(${cardGreenSVG})  no-repeat bottom center,${colors.Primary};}
     &#card:nth-child(3){background: url(${cardBlueSVG})   no-repeat bottom center,${colors.Primary};}
     &#card:nth-child(4){background: url(${cardPurpleSVG}) no-repeat bottom center,${colors.Primary};}
@@ -97,10 +96,11 @@ export const Card = styled.div`
     &#card:nth-child(3){>#Slider{background:${colors.CardBlue};}}
     &#card:nth-child(4){>#Slider{background:${colors.CardPurple};}}
 
-    &#card:nth-child(1){>#Svg{background:url(${htmlSVG}) no-repeat center center,${colors.Primary}; box-shadow: 0px 0px 5px 4px ${colors.BorderRed};}}
-    &#card:nth-child(2){>#Svg{background:url(${designSVG}) no-repeat center center,${colors.Primary}; box-shadow: 0px 0px 5px 4px ${colors.BorderGreen};}}
-    &#card:nth-child(3){>#Svg{background:url(${mobileSVG}) no-repeat center center,${colors.Primary}; box-shadow: 0px 0px 5px 4px ${colors.BorderBlue};}}
-    &#card:nth-child(4){>#Svg{background:url(${reactSVG}) no-repeat center center,${colors.Primary}; box-shadow: 0px 0px 5px 4px ${colors.BorderPurple};}}
+    &#card:nth-child(1){>#Svg{background:url(${htmlSVG}) no-repeat center center,${colors.Primary};box-shadow: 0px 0px 5px 4px ${colors.DarkRed};}}
+    &#card:nth-child(2){>#Svg{background:url(${designSVG}) no-repeat center center,${colors.Primary};box-shadow: 0px 0px 5px 4px ${colors.DarkGreen};}}
+    &#card:nth-child(3){>#Svg{background:url(${mobileSVG}) no-repeat center center,${colors.Primary};box-shadow: 0px 0px 5px 4px ${colors.DarkBlue};}}
+    &#card:nth-child(4){>#Svg{background:url(${reactSVG}) no-repeat center center,${colors.Primary};box-shadow: 0px 0px 5px 4px ${colors.DarkPurple};}}
+
 
 
   :hover {
@@ -110,6 +110,7 @@ export const Card = styled.div`
       z-index: -100;
     }
     >#Svg{animation:${FadeIn} 300ms forwards }
+
     &#card:nth-child(1){>#Svg{background:url(${htmlSVG}) no-repeat center center,${colors.Primary};box-shadow: 0px 0px 5px 4px ${colors.DarkRed};}}
     &#card:nth-child(2){>#Svg{background:url(${designSVG}) no-repeat center center,${colors.Primary};box-shadow: 0px 0px 5px 4px ${colors.DarkGreen};}}
     &#card:nth-child(3){>#Svg{background:url(${mobileSVG}) no-repeat center center,${colors.Primary};box-shadow: 0px 0px 5px 4px ${colors.DarkBlue};}}
@@ -124,18 +125,17 @@ export const Card = styled.div`
 
 export const Slider = styled.div`
   background-color: #505050;
-  margin-top: 1em;
-  width: 6em;
-  height: 6em;
-  border-radius: 100%;
+  
+  width: 100%;
+  height: 0;
   z-index: -1;
   animation: ${OutIn} 300ms forwards;
 `
 
 export const Svg = styled.div`
 position: absolute;
-  background: ${colors.Primary};
-  margin-top: 1em;
+  background-color: #505050;
+  margin-bottom: 21.1em;
   width: 6em;
   height: 6em;
   border-radius: 100%;
@@ -148,9 +148,5 @@ export const Description = styled.p`
   max-width: 13em;
   text-align: center;
   z-index: 100;
-  margin: 16em 0;
+  margin: 3.85em 0;
 `
-
-
-
-

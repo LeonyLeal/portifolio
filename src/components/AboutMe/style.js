@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
+import {colors, fonts} from '../../styles/GlobalStyles'
+
 const BubblesAni = keyframes`
  0% {
     opacity: 0.2;
@@ -56,7 +58,7 @@ export const Bubble = styled.div`
   width: 3em;
   position: absolute;
   border-radius: 100%;
-  background: radial-gradient(50% 50% at 50% 50%, #cc0092 0%, #ff4dcc 87.5%);
+  background: ${colors.Bubbles};
   opacity: 1;
   animation: ${BubblesAni} 6s linear infinite,
     ${sideWays} 1s ease-in-out alternate infinite;
@@ -189,13 +191,7 @@ export const AboutMeWrapper = styled.div`
 `
 
 export const Background = styled.div`
-  background: linear-gradient(
-    180deg,
-    rgba(255, 0, 184, 0) 0%,
-    #ff00b8 17.19%,
-    #ff007a 80.73%,
-    rgba(255, 0, 122, 0) 100%
-  );
+  background: ${colors.PrimaryLinear};
   background-size: cover;
   text-align: center;
   background-position: center center;
@@ -247,7 +243,7 @@ export const Name = styled.h1`
   padding-bottom: 0;
   text-align: start;
   align-items: center;
-  color: white;
+  color: ${colors.Secondary};
   font-weight: 400;
   font-style: italic;
 
@@ -261,7 +257,7 @@ export const Profile = styled.img`
   min-width: 150px;
   max-height: auto;
   border-radius: 1.5em;
-  border: 5px solid #f2f2f2;
+  border: 5px solid ${colors.Secondary};
 
   @media (min-width: 600px) {
     max-width: auto;

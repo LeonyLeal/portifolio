@@ -1,17 +1,36 @@
 import React from 'react'
 import { Title } from '../../styles/GlobalStyles'
 
-import { Card, CardWrapper, SkillsContainer } from './style'
+
+import { Card, CardWrapper, Svg, Description,SkillsContainer, Slider } from './style2'
+
+
 
 function Skills() {
   return (
     <SkillsContainer id="Section-C">
       <Title>Skills</Title>
       <CardWrapper>
-        <Card id="card-1"></Card>
-        <Card id="card-2"></Card>
-        <Card id="card-3"></Card>
-        <Card id="card-4"></Card>
+        <Card id="card">
+        <Slider id="Slider"/>
+        <Svg id="Svg"/>
+        <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim eu.</Description>
+        </Card>
+        <Card id="card">
+        <Slider id="Slider"/>
+        <Svg id="Svg"/>
+        <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim eu.</Description>
+        </Card>
+        <Card id="card">
+        <Slider id="Slider"/>
+        <Svg id="Svg"/>
+        <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim eu.</Description>
+        </Card>
+        <Card id="card">
+        <Slider id="Slider"/>
+        <Svg id="Svg"/>
+        <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim eu.</Description>
+        </Card>
       </CardWrapper>
     </SkillsContainer>
   )
