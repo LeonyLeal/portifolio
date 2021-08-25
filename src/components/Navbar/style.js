@@ -4,6 +4,7 @@ import BurgerSVG from '../../img/BurgerSVG.svg'
 import ThemeSVG from '../../img/ThemeSVG.svg'
 
 export const Nav = styled.nav`
+  user-select: none;
   z-index: 10;
   position: fixed;
   align-items: center;

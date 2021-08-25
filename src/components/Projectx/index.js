@@ -1,7 +1,7 @@
 import React from 'react'
 import { Title, Text as Description } from '../../styles/GlobalStyles'
-import projectOne_1 from '../../img/projectOne_1.png'
-import projectOne_2 from '../../img/projectOne_2.png'
+import projectOne_1 from '../../img/projects/projectOne_1.png'
+import projectOne_2 from '../../img/projects/projectOne_2.png'
 
 import { ProjectWrapper, ProjectContainer, ProjectCard, Preview, TextWrapper } from './style'
 

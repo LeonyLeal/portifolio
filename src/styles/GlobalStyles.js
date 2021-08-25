@@ -10,6 +10,7 @@ export const colors = {
   Secondary: "#F2F2F2",
   PrimaryLinear: "linear-gradient(180deg,rgba(255, 0, 184, 0) 0%,#ff00b8 17.19%,#ff007a 80.73%,rgba(255, 0, 122, 0) 100%)",
   Bubbles: "radial-gradient(50% 50% at 50% 50%, #cc0092 0%, #ff4dcc 87.5%)",
+  Test: "#000",
 
   //Cards Colors:
   CardRed:"linear-gradient(180deg, #EA3A46 0%, #BF323C 100%)",

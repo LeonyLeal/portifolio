@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
-import {colors, fonts} from '../../styles/GlobalStyles'
+import {colors} from '../../styles/GlobalStyles'
+
 
 const BubblesAni = keyframes`
  0% {
@@ -203,6 +204,7 @@ export const Carousel = styled.p`
   font-weight: lighter;
   font-size: 2rem;
   animation: all 1s ease-in-out;
+  user-select: none;
 `
 
 export const Content = styled.div`
@@ -258,6 +260,7 @@ export const Profile = styled.img`
   max-height: auto;
   border-radius: 1.5em;
   border: 5px solid ${colors.Secondary};
+  user-select: none;
 
   @media (min-width: 600px) {
     max-width: auto;
