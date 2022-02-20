@@ -1,9 +1,32 @@
 # Portifolio
 
+1. [O que é?](https://github.com/LeonyLeal/portifolio/edit/main/README.md#o-que-é)
+2. [Sections](https://github.com/LeonyLeal/portifolio/edit/main/README.md#sections)
+    -   [Whoami](https://github.com/LeonyLeal/portifolio/edit/main/README.md#whoami)
+    -   [Socials and Skills](https://github.com/LeonyLeal/portifolio/edit/main/README.md#socials--skills)
+    -   [Projects](https://github.com/LeonyLeal/portifolio/edit/main/README.md#projects)
+4. [Iniciar Projeto](https://github.com/LeonyLeal/portifolio/edit/main/README.md#inciar-projeto)
 
 ### O Que é?
-Primeira versão do meu portifólio, usando quase nada de Javascript, porém estilizando bastante com Styled-components e criando Componentes do React Js :flushed::ok_hand:. **Um trabalho até que razoavel para quem esta iniciando**
+Experiencia Front-end utilizando React e Styled-components :flushed::ok_hand:.
 
+### Sections
+#### Whoami
+#### Web:
+![image](https://github.com/LeonyLeal/portifolio/blob/main/Screenshots/Whoiam.png?raw=true)
+#### Mobile:
+![image](https://github.com/LeonyLeal/portifolio/blob/main/Screenshots/whoiam%20Mobile.png?raw=true)
+#### Socials || Skills
+#### Web:
+![image](https://github.com/LeonyLeal/portifolio/blob/main/Screenshots/Socials%20and%20Skills.png?raw=true)
+#### Mobile:
+![image](https://github.com/LeonyLeal/portifolio/blob/main/Screenshots/Socials%20and%20Skills%20Mobile.png?raw=true)
+### Projects
+#### Web:
+![image](https://github.com/LeonyLeal/portifolio/blob/main/Screenshots/Projects.png?raw=true)
+#### Mobile:
+![image](https://github.com/LeonyLeal/portifolio/blob/main/Screenshots/Projects%20Mobile.png?raw=true)
+ 
 ## Inciar Projeto
 1) Instalar Dependencias: 
     `$ npm install`
