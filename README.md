@@ -1,11 +1,11 @@
 # Portifolio
 
-1. [O que é?](https://github.com/LeonyLeal/portifolio/edit/main/README.md#o-que-é)
-2. [Sections](https://github.com/LeonyLeal/portifolio/edit/main/README.md#sections)
-    -   [Whoami](https://github.com/LeonyLeal/portifolio/edit/main/README.md#whoami)
-    -   [Socials and Skills](https://github.com/LeonyLeal/portifolio/edit/main/README.md#socials--skills)
-    -   [Projects](https://github.com/LeonyLeal/portifolio/edit/main/README.md#projects)
-4. [Iniciar Projeto](https://github.com/LeonyLeal/portifolio/edit/main/README.md#inciar-projeto)
+1. [O que é?](https://github.com/LeonyLeal/portifolio#o-que-é)
+2. [Sections](https://github.com/LeonyLeal/portifolio#sections)
+    -   [Whoami](https://github.com/LeonyLeal/portifolio#whoami)
+    -   [Socials and Skills](https://github.com/LeonyLeal/portifolio#socials--skills)
+    -   [Projects](https://github.com/LeonyLeal/portifolio#projects)
+4. [Iniciar Projeto](https://github.com/LeonyLeal/portifolio#inciar-projeto)
 
 ### O Que é?
 Experiencia Front-end utilizando React e Styled-components :flushed::ok_hand:.
