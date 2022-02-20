@@ -1,20 +1,18 @@
-import { GlobalStyles } from './styles/GlobalStyles'
-
+import React from 'react'
 import Navbar from './components/Navbar'
-import AboutMe from './components/AboutMe'
-import Skills from './components/Skills'
-import Projectxs from './components/Projectx'
-import Socials from './components/Social'
+import AboutMe from './sections/AboutMe'
+import Skills from './sections/Skills/'
+import Projectxs from './sections/Projectx'
+import Socials from './sections/Social'
 
 function App() {
   return (
     <>
       <Navbar />
       <AboutMe />
+      <Socials />
       <Skills />
       <Projectxs />
-      <Socials />
-      <GlobalStyles />
     </>
   )
 }

@@ -1,37 +1,60 @@
 import styled from 'styled-components'
-import { colors } from '../../styles/GlobalStyles'
+import { palette } from '../../styles/GlobalStyles'
 import BurgerSVG from '../../img/BurgerSVG.svg'
 import ThemeSVG from '../../img/ThemeSVG.svg'
+import MenuSVG from '../../img/Menu_Squaves.svg'
 
 export const Nav = styled.nav`
+visibility: hidden;
+  background:url(${MenuSVG}) no-repeat center bottom , #252525;
+  background-size: contain;
   user-select: none;
-  z-index: 10;
+  z-index: 1000;
   position: fixed;
+  overflow: hidden;
+  top:0;
   align-items: center;
-  top: 0.5em;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  
+  @media (min-width:600px){
+    background: transparent;
+    top:0.5em;
+    height: 44px;
+  }
 `
 export const Menu = styled.div`
   visibility: hidden;
+  height: 75%;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   min-height: 2.75em;
-  margin: 0 3.125em;
-  width: fit-content;
+  margin: 0 auto;
+  width: 100%;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   justify-items: center;
 
   @media (min-width: 600px) {
-    visibility: visible;
+    visibility: hidden;
+    min-height: 2.75em;
+    flex-direction: row;
+    margin: 0 3.125em;
+    width: fit-content;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
   }
 `
 export const MenuLink = styled.a`
-  color: ${colors.Secondary};
+  color: ${palette.primary.light};
   padding: 0 10px;
   cursor: pointer;
   text-decoration: none;

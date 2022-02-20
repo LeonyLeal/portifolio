@@ -12,10 +12,10 @@ import LinkedinSVG      from '../../img/socials/linkedin.svg'
 import LinkedinFillSVG  from '../../img/socials/linkedinFill.svg'
 import TwitterSVG       from '../../img/socials/twitter.svg'
 import TwitterFillSVG   from '../../img/socials/twitterFill.svg'
-import { colors }       from '../../styles/GlobalStyles'
+import { palette }       from '../../styles/GlobalStyles'
 
 export const SocialContainer = styled.section`
-  min-height: 20vh;
+  margin-top: .1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,7 @@ export const SociaLink = styled.a`
   cursor: pointer;
   background-position: start center;
   background-repeat: no-repeat;
-  color: ${colors.Secondary};
+  color: ${palette.primary.light};
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0.3em 1em;

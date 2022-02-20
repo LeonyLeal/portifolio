@@ -46,7 +46,7 @@ function Socials() {
         <SociaLink
           id="social"
           target="_blank"
-          href="https://twitter.com/NoLye99"
+          href="https://twitter.com/Leony_1999"
         >
           Twitter
         </SociaLink>

@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-import {colors} from '../../styles/GlobalStyles'
+import {palette} from '../../styles/GlobalStyles'
 
 
 const BubblesAni = keyframes`
@@ -41,7 +41,8 @@ const sideWays = keyframes`
 
 export const Bubbles = styled.div`
   display: flex;
-  min-height: 35em;
+  min-height: 30.5em;
+  max-height: 33.5em;
   top: 30%;
   flex-direction: column;
   flex-wrap: wrap;
@@ -52,6 +53,10 @@ export const Bubbles = styled.div`
   width: 100%;
   overflow: hidden;
   z-index: 1;
+
+  @media(min-width:600px){
+      min-height:29em;
+  }
 `
 
 export const Bubble = styled.div`
@@ -59,7 +64,7 @@ export const Bubble = styled.div`
   width: 3em;
   position: absolute;
   border-radius: 100%;
-  background: ${colors.Bubbles};
+  background: ${palette.bubbles.main};
   opacity: 1;
   animation: ${BubblesAni} 6s linear infinite,
     ${sideWays} 1s ease-in-out alternate infinite;
@@ -192,7 +197,7 @@ export const AboutMeWrapper = styled.div`
 `
 
 export const Background = styled.div`
-  background: ${colors.PrimaryLinear};
+  background: ${palette.secondary.main};
   background-size: cover;
   text-align: center;
   background-position: center center;
@@ -224,10 +229,8 @@ export const ContentWrapper = styled.section`
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
-  min-height: 100vh;
-  > #Who {
-    margin-top: 10%;
-  }
+  min-height: fit-content;
+  margin-top: 5em;
 `
 
 export const MeWrapper = styled.div`
@@ -241,11 +244,12 @@ export const MeWrapper = styled.div`
 export const Name = styled.h1`
   z-index: 10;
 
-  padding: 1.5em;
+  padding: 1.5em 0;
   padding-bottom: 0;
   text-align: start;
   align-items: center;
-  color: ${colors.Secondary};
+  color: ${palette.primary.light};
+  font-size: 2rem;
   font-weight: 400;
   font-style: italic;
 
@@ -259,7 +263,7 @@ export const Profile = styled.img`
   min-width: 150px;
   max-height: auto;
   border-radius: 1.5em;
-  border: 5px solid ${colors.Secondary};
+  border: 5px solid ${palette.primary.light};
   user-select: none;
 
   @media (min-width: 600px) {
