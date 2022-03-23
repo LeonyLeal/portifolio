@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 //Styles
 const InOut = keyframes`
    0%{
+      padding-bottom: 2em;
        height: 6em;
        width: 6em;
        border-radius: 50%;
@@ -36,13 +37,13 @@ const FadeIn = keyframes`
    }
    100%{
    opacity: 1;
-   transform: translate(0, .5em)
+   transform: translate(0, -1em)
    }
    `
 
 const FadeOut = keyframes`
    0%{
-   transform: translate(0, .5em);
+   transform: translate(0, -1em);
    }
    100%{
    transform: translate(0);
@@ -60,8 +61,9 @@ export const Container = styled.div`
   z-index: 1;
   margin: 3em 0.7em;
   border-radius: 1em;
+  border: 2px solid ${props => props.theme.colors.secondary};
   background: url(${(props) => props.wave}) no-repeat bottom center,
-    #151515;
+   #202020;
 
   :hover {
     > #background {
@@ -77,7 +79,7 @@ export const Container = styled.div`
 `
 
 export const Circle = styled.div`
-  margin-top: 1em;
+  margin-top: 2em;
   width: 6em;
   height: 6em;
   border-radius: 100%;
@@ -88,7 +90,7 @@ export const Circle = styled.div`
 
 export const Svg = styled.div`
   position: absolute;
-  margin-top: 1em;
+  margin-top: 2em;
   width: 6em;
   height: 6em;
   border-radius: 100%;
@@ -103,6 +105,8 @@ export const Description = styled.p`
   position: absolute;
   margin: 15em 0;
   max-width: 15em;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.1);
   color: #f2f2f2;
   z-index: 100;
   text-align: center;

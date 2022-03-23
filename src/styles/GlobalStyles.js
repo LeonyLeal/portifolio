@@ -1,26 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
-// variables Colors
-
 export const palette = {
-  primary: {
-    main: '#252525',
-    light: '#F4F4F4',
-    dark: '#252525',
-  },
-  secondary: {
-    main:
-      'linear-gradient(180deg,rgba(255, 0, 184, 0) 0%,#ff00b8 17.19%,#ff007a 80.73%,rgba(255, 0, 122, 0) 100%)',
-    light:
-      'linear-gradient(180deg, rgba(246, 235, 207, 0) 0%, rgba(255, 219, 25, 0) 0.01%, #FFDB19 13.02%, #FFB800 79.17%, rgba(255, 184, 0, 0) 100%)',
-    dark:
-      'linear-gradient(180deg,rgba(255, 0, 184, 0) 0%,#ff00b8 17.19%,#ff007a 80.73%,rgba(255, 0, 122, 0) 100%)',
-  },
-  bubbles: {
-    main: 'radial-gradient(50% 50% at 50% 50%, #cc0092 0%, #ff4dcc 87.5%)',
-    light: 'radial-gradient(50% 50% at 50% 50%, #D7BD2F 0%, #FFE866 100%)',
-    dark: 'radial-gradient(50% 50% at 50% 50%, #cc0092 0%, #ff4dcc 87.5%)',
-  },
   cards: {
     background: {
       red: 'linear-gradient(180deg, #EA3A46 0%, #BF323C 100%)',
@@ -59,38 +39,42 @@ export const fonts = {
 export const GlobalStyles = createGlobalStyle`
 ::-webkit-scrollbar{
         width: 10px;
-    }
+}
 
 ::-webkit-scrollbar-track {
-    background: rgba(37, 37, 37, 0.0);
+    background: ${props => props.theme.colors.secondary};
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5);
+  background:${props => props.theme.colors.scroll} ;
   border-radius: 25px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: ${palette.primary.light};
+  background: ${props => props.theme.colors.primary}; 
 }
 
 ::-webkit-scrollbar-thumb:scroll {
-  background: ${palette.primary.light};
+  background: ${props => props.theme.colors.primary};
 }
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
 }
 
 body{
     box-sizing: border-box;
     font-family: "Nunito";
     margin: 0;
-    background-color: ${palette.primary.main};
-    color: ${palette.primary.light};
-    overflow-x: hidden;
+    background-color: ${props => props.theme.colors.primary}; 
+    color: ${props => props.theme.colors.secondary}; 
     scroll-behavior: smooth;
     overflow-y: overlay;
+
+    a{
+      color: ${props => props.theme.colors.secondary};
+    }
    
 }
 `
@@ -126,5 +110,6 @@ export const Text = styled.p`
     max-width: 30em;
   }
 `
+
 
 export default GlobalStyles

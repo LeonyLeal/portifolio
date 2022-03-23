@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-import { palette} from '../../styles/GlobalStyles'
 
 
 export const SkillsContainer = styled.section`
-background: linear-gradient(180deg, rgba(165, 11, 252, 0) 0%, #A00DFF 17.19%, #CB00E8 80.73%, rgba(196, 2, 235, 0) 100%);
+  /*background: linear-gradient(180deg, rgba(165, 11, 252, 0) 0%, #A00DFF 17.19%, #CB00E8 80.73%, rgba(196, 2, 235, 0) 100%);*/
     margin-top: 10vh;
     min-height: fit-content;
     display: flex;
@@ -40,8 +39,9 @@ export const SlideButton = styled.div `
 position: absolute;
 width: 1.5em;
 height: 1.5em;
-background: #101010;
-box-shadow: 0px 0px 5px 1px  ${palette.primary.light};
+background: ${props => props.theme.colors.secondary};
+box-shadow: 0px 0px 5px 1px  ${props => props.theme.colors.secondary};
+color: ${props => props.theme.colors.primary};
 border-radius: 100%;
 text-align: center;
 z-index: 100;

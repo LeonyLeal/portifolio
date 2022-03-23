@@ -1,19 +1,39 @@
-import React from 'react'
-import { Nav, Menu, MenuLink, Burger, Svg, Theme } from './style'
+import React, {useState,useRef} from 'react'
+import { Nav, Menu, MenuLink, Burger, Svg, ThemeBtn } from './style'
 
-function Navbar() {
+
+
+function Navbar(props) {
+  const [checked, setChecked] = useState(true);
+
+  const NavRef = useRef(null)
+
+  const onBurgerClick = () =>{
+   checked? setChecked(false): setChecked(true)
+   NavRef.current.style.visibility = checked? "visible" : "hidden"
+   NavRef.current.parentElement.parentElement.style.overflow = checked? "hidden": "scroll"
+   NavRef.current.style.animation = checked? "outIn 1s forwards" : "inOut 1s forwards"
+  }
+
+  const onSectionClick = () => {
+  NavRef.current.style.animation = "inOut 1s forwards"
+  setChecked(true)
+  setTimeout(() =>NavRef.current.style.visibility = "hidden", 500)
+  }
+
+
+
   return (
-    <Nav id="Nav">
-    <Menu id="Menu">
-      <MenuLink href="#Section-A">Quem?</MenuLink>
-      <MenuLink href="#Section-B">Social</MenuLink>
-      <MenuLink href="#Section-C">Skills</MenuLink>
-      <MenuLink href="#Section-D">Projects</MenuLink>
+    <Nav ref={NavRef} id="Nav" >
+    <Menu  ref={NavRef} id="Menu">
+      <MenuLink onClick={onSectionClick} href="#Section-A">Quem?</MenuLink>
+      <MenuLink onClick={onSectionClick} href="#Section-B">Social</MenuLink>
+      <MenuLink onClick={onSectionClick} href="#Section-C">Skills</MenuLink>
+      <MenuLink onClick={onSectionClick} href="#Section-D">Projects</MenuLink>
     </Menu>
-    <Theme id="Theme" onClick={() => console.log('Tema Mudado2')} />
     <Svg id="Nav_Mobile">
-      <Burger onClick={() => console.log('Menu')} />
-      <Theme onClick={() => console.log('Tema Mudado')} />
+      <Burger id="nav" onClick={onBurgerClick} />
+      <ThemeBtn onClick={props.onChangeTheme}/>
     </Svg>
   </Nav>
   )

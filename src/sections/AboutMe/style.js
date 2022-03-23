@@ -1,7 +1,5 @@
 import styled, { keyframes } from 'styled-components'
 
-import {palette} from '../../styles/GlobalStyles'
-
 
 const BubblesAni = keyframes`
  0% {
@@ -37,7 +35,7 @@ const sideWays = keyframes`
     100% { 
         margin:0 3em;
     }
-}`
+`
 
 export const Bubbles = styled.div`
   display: flex;
@@ -64,7 +62,7 @@ export const Bubble = styled.div`
   width: 3em;
   position: absolute;
   border-radius: 100%;
-  background: ${palette.bubbles.main};
+  background: ${props => props.theme.colors.bubble};
   opacity: 1;
   animation: ${BubblesAni} 6s linear infinite,
     ${sideWays} 1s ease-in-out alternate infinite;
@@ -197,7 +195,7 @@ export const AboutMeWrapper = styled.div`
 `
 
 export const Background = styled.div`
-  background: ${palette.secondary.main};
+  background: ${props => props.theme.colors.aboutMeBackground};
   background-size: cover;
   text-align: center;
   background-position: center center;
@@ -248,7 +246,6 @@ export const Name = styled.h1`
   padding-bottom: 0;
   text-align: start;
   align-items: center;
-  color: ${palette.primary.light};
   font-size: 2rem;
   font-weight: 400;
   font-style: italic;
@@ -259,16 +256,18 @@ export const Name = styled.h1`
     padding-right: 40%;
   }
 `
-export const Profile = styled.img`
+export const Profile = styled.img` 
   min-width: 150px;
   max-height: auto;
-  border-radius: 1.5em;
-  border: 5px solid ${palette.primary.light};
+  border-radius: 1.3em;
+  border: 5px solid ${props => props.theme.colors.primary};
   user-select: none;
+  margin-right: 1em;
 
-  @media (min-width: 600px) {
+  @media (min-width: 950px) {
     max-width: auto;
     max-height: 362px;
+    margin-right: 0;
   }
 `
 

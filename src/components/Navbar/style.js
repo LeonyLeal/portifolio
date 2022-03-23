@@ -1,17 +1,13 @@
 import styled from 'styled-components'
-import { palette } from '../../styles/GlobalStyles'
-import BurgerSVG from '../../img/BurgerSVG.svg'
-import ThemeSVG from '../../img/ThemeSVG.svg'
-import MenuSVG from '../../img/Menu_Squaves.svg'
+
 
 export const Nav = styled.nav`
-visibility: hidden;
-  background:url(${MenuSVG}) no-repeat center bottom , #252525;
+  visibility: hidden;
   background-size: contain;
+  background: url(${props => props.theme.backgroundM}) no-repeat center bottom,${props => props.theme.colors.primary};
   user-select: none;
-  z-index: 1000;
   position: fixed;
-  overflow: hidden;
+  z-index: 1000;
   top:0;
   align-items: center;
   width: 100%;
@@ -21,17 +17,46 @@ visibility: hidden;
   flex-direction: row;
   justify-content: space-between;
   
+  @keyframes outIn {
+    0%{
+    opacity: 0;
+    background:${props => props.theme.colors.primary};
+    transform: translate(0%, -200%);
+   }
+   100%{
+    opacity: 1;
+    background-size: contain;
+    transform: translate(0%, 0%);
+   }
+  }
+  @keyframes inOut {
+   0%{
+    transform: translate(0%, -200%);
+   }
+   75%{
+    visibility: hidden;
+    background-color: transparent;
+    transform: translate(0%, -100%);
+   }
+   100%{
+    
+    transform: translate(0%, 0%);
+   }
+  }
+
+
   @media (min-width:600px){
+    visibility:  hidden !important;
     background: transparent;
     top:0.5em;
     height: 44px;
   }
 `
 export const Menu = styled.div`
-  visibility: hidden;
-  height: 75%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   flex-wrap: wrap;
   min-height: 2.75em;
   margin: 0 auto;
@@ -42,7 +67,7 @@ export const Menu = styled.div`
   justify-items: center;
 
   @media (min-width: 600px) {
-    visibility: hidden;
+    visibility: visible;
     min-height: 2.75em;
     flex-direction: row;
     margin: 0 3.125em;
@@ -54,11 +79,14 @@ export const Menu = styled.div`
   }
 `
 export const MenuLink = styled.a`
-  color: ${palette.primary.light};
-  padding: 0 10px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 2rem;
+
+  @media (min-width: 600px){
+    padding: 0 1em;
+    font-size: 1.4rem;
+  }
 `
 
 export const Svg = styled.div`
@@ -82,30 +110,33 @@ export const Svg = styled.div`
 `
 
 export const Burger = styled.a`
-  background: url(${BurgerSVG});
+  background: url(${props => props.theme.burger});
   visibility: visible;
   background-position: center center;
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   cursor: pointer;
+  :hover{
+   
+  }
   @media (min-width: 600px) {
     visibility: hidden;
   }
 `
-export const Theme = styled.a`
-  background: url(${ThemeSVG});
+export const ThemeBtn = styled.a`
+  visibility: visible;
+  background: url(${props => props.theme.btnTheme});
   background-position: center center;
   background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
+  background-size: contain;
+  width: 2.2rem;
+  height: 2.2rem;
   cursor: pointer;
-
-  &#Theme {
-    visibility: hidden;
-    @media (min-width: 600px) {
-      visibility: visible;
-      margin: 0 25px;
-    }
+  :hover{
+    background: url(${props => props.theme.btnThemeFill});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 `

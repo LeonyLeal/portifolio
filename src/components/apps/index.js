@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container,Title,Description,Preview} from './style'
+import {Container,Title,Description,Preview, Album} from './style'
 
 
 function Apps (props) {
@@ -12,7 +12,11 @@ function Apps (props) {
         <Container>
             <Title>{insTitle}</Title>
             <Description>{props.children}</Description>
+            <Album>
             <Preview src={insPreview} ></Preview>
+            <Preview src={insPreview} ></Preview>
+            <Preview src={insPreview} ></Preview>
+            </Album>
         </Container>
     )
 }
