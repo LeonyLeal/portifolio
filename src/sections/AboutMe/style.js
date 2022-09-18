@@ -256,8 +256,8 @@ export const Name = styled.h1`
   }
 `
 export const Profile = styled.img` 
-  min-width: 150px;
-  max-height: auto;
+  min-height: 200px;
+  max-height: 350px;
   border-radius: 1.3em;
   border: 5px solid ${props => props.theme.colors.primary};
   user-select: none;
