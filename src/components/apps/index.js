@@ -14,8 +14,6 @@ function Apps (props) {
             <Description>{props.children}</Description>
             <Album>
             <Preview src={insPreview} ></Preview>
-            <Preview src={insPreview} ></Preview>
-            <Preview src={insPreview} ></Preview>
             </Album>
         </Container>
     )

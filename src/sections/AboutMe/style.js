@@ -241,7 +241,6 @@ export const MeWrapper = styled.div`
 
 export const Name = styled.h1`
   z-index: 10;
-
   padding: 1.5em 0;
   padding-bottom: 0;
   text-align: start;
@@ -266,7 +265,7 @@ export const Profile = styled.img`
 
   @media (min-width: 950px) {
     max-width: auto;
-    max-height: 362px;
+    max-height: 375px;
     margin-right: 0;
   }
 `

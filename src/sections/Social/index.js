@@ -1,7 +1,7 @@
-import React from 'react'
-import { Title } from '../../styles/GlobalStyles'
+import React from "react";
+import { Title } from "../../styles/GlobalStyles";
 
-import { SocialContainer, SociaLink, SocialWrapper } from './style'
+import { SocialContainer, SociaLink, SocialWrapper } from "./style";
 
 function Socials() {
   return (
@@ -52,7 +52,7 @@ function Socials() {
         </SociaLink>
       </SocialWrapper>
     </SocialContainer>
-  )
+  );
 }
 
-export default Socials
+export default Socials;

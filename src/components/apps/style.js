@@ -18,14 +18,20 @@ text-align: center;
 
 export const Description = styled.p`
 text-align: center;
+width: 80%;
+@media (min-width: 1370px) {
+    width: 40%;
+  }
 `
 
 export const Preview = styled.img`
   margin: 2em;
-  width: 12em;
+  width: 100%;
   @media (min-width: 1370px) {
-    width: 14em;
+    width: 50%;
   }
 `
+
+
 
 
