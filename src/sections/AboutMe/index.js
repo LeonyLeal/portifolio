@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Perfil from "../../img/Perfil.jpg";
 import { Span, Text, Title } from "../../styles/GlobalStyles";
 import {
@@ -18,12 +18,12 @@ import {
 function AboutMe() {
   const word = ["Front-end", "Back-end", "Designer"]; //Array das palavras
 
-  const [index, setindex] = useState(0); //index para indicar a posição do Array Word[index]
+  const [w, setwindex] = useState(0); //index para indicar a posição do Array Word[index]
   const [words, setWords] = useState(""); // estado inicial das palavras
+  const index = useRef(0);
 
   const carouselWord = () => {
-    const pos = index + 1 === word.length ? 0 : index + 1; //se o index + 1 for igual ao tamanho do array == 3, então vai pra zero, caso contrario add +1
-    setindex(pos); //addicionando a constante na posição do array
+    index.current = index.current + 1 //addicionando a constante na posição do array
     document.getElementById("Carousel").animate(
       [
         { opacity: 0, transform: "translate(-1em, 0)" },
@@ -43,9 +43,9 @@ function AboutMe() {
   setTimeout(carouselWord, 2900); // delay para cada iteração
 
   useEffect(() => {
-    setWords(word[index]);
+    setWords(words[index]);
     // eslint-disable-next-line
-  }, [word]);
+  }, [index]);
 
   return (
     <ContentWrapper id="Section-A">
@@ -65,7 +65,7 @@ function AboutMe() {
             </TextWrapper>
             <ProfileWrapper id="DivWrapper">
               <Profile src={Perfil} id="Profile_Photo"></Profile>
-              <Carousel id="Carousel">{words}</Carousel>
+              <Carousel id="Carousel">{index.current}</Carousel>
             </ProfileWrapper>
           </AboutMeWrapper>
         </Content>

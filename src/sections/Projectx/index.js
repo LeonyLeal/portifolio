@@ -13,13 +13,13 @@ function Projectxs() {
           Desafio feito para testar minhas habilidades de criar backend em
           Django e consumir a API através do frontend(Vue.js), utilizando as
           dependências Django-cors-headers, django rest Framework no backend e
-          no frontend axios e Vuetify. Projeto disponível no {" "}
+          no frontend axios e Vuetify. Projeto disponível no{" "}
           <Link
             id="Desafio Crud"
             target="_blank"
             href="https://github.com/LeonyLeal/Desafio-CRUD"
           >
-             Github
+            Github
           </Link>
           .
         </Apps>

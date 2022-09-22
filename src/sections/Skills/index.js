@@ -48,7 +48,9 @@ function Skills() {
             shadow={palette.cards.border.red}
             shadow_hover={palette.cards.border.selectedRed}
           >
-            {"Conhecimentos em HTML e CSS avançados, sabendo bastante as tags e montagem de estruturas, estilização de páginas tanto manual com o próprio css ou com alguma biblioteca como Bootstrap, Material, Vuetify etc... "}
+            {
+              "Conhecimentos em HTML e CSS avançados, sabendo bastante as tags e montagem de estruturas, estilização de páginas tanto manual com o próprio css quanto com alguma biblioteca como Bootstrap, Material, Vuetify etc... "
+            }
           </Card>
           <Card
             wave={cardGreenSVG}
@@ -57,7 +59,9 @@ function Skills() {
             shadow={palette.cards.border.green}
             shadow_hover={palette.cards.border.selectedGreen}
           >
-            {"Prototipação é a chave de uma boa visualização do que se quer construir tanto na parte de HTML quanto no css ou em outra engine de estilizção, utilizo bastante o Figma para UX e UI dos meus projetos, inclusive esse portifólio "}
+            {
+              "Prototipação é a chave de uma boa visualização do que se quer construir tanto na parte de HTML quanto no css ou em outra engine de estilizção, utilizo bastante o Figma para UX e UI dos meus projetos, inclusive nesse portifólio "
+            }
           </Card>
           <Card
             wave={cardBlueSVG}
@@ -66,7 +70,9 @@ function Skills() {
             shadow={palette.cards.border.blue}
             shadow_hover={palette.cards.border.selectedBlue}
           >
-            {"em cada código que eu faço/refatoro eu levo o desenvolvimento agil comigo, tenho muito apreço pelos livros do Robert C. martin(uncle bob) que me passou muitos conhecimento relacionados a desenvolvimento agil, Código limpo. "}
+            {
+              "Em cada código que eu faço/refatoro eu levo o desenvolvimento agil comigo, tenho muito apreço pelos livros do Robert C. martin(uncle bob) que me passou muitos conhecimentos relacionados a desenvolvimento agil, Código limpo. "
+            }
           </Card>
           <Card
             wave={cardPurpleSVG}
@@ -75,7 +81,9 @@ function Skills() {
             shadow={palette.cards.border.purple}
             shadow_hover={palette.cards.border.selectedPurple}
           >
-            {"já Estudei diversos Frameworks, porém Django, Vue.js e React.js/Next.js são os que eu mais consegui tirar proveito e ter avanços, Django é um ótimo framework para fazer Api e vue.js React/next.js são ótimos para fazer um frontend bonito e eficiente"}
+            {
+              "Estudei diversos Frameworks, porém Django, Vue.js e React.js/Next.js são os que eu mais consegui tirar proveito e ter avanços, Django é um ótimo framework para fazer Api e vue.js React/next.js são ótimos para fazer um frontend bonito e eficiente"
+            }
           </Card>
         </CardWrapper>
       </Slide>

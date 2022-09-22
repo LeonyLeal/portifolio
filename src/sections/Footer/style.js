@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components";
 
 const BubblesAni = keyframes`
  0% {
@@ -27,7 +27,7 @@ const BubblesAni = keyframes`
     bottom: 90%;
     opacity: 0;
 }
-`
+`;
 const sideWays = keyframes`
        0% { 
         margin-left:0em;
@@ -35,8 +35,7 @@ const sideWays = keyframes`
     100% { 
         margin-left:3em;
     }
-}
-`
+`;
 
 export const Bubbles = styled.div`
   position: absolute;
@@ -49,7 +48,7 @@ export const Bubbles = styled.div`
     height: 60%;
     top: 30%;
   }
-`
+`;
 
 export const Bubble = styled.div`
   height: 3em;
@@ -119,7 +118,7 @@ export const Bubble = styled.div`
       left: 90%;
     }
   }
-`
+`;
 
 export const AboutMeWrapper = styled.div`
   z-index: 10;
@@ -130,7 +129,7 @@ export const AboutMeWrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
-`
+`;
 
 export const Background = styled.div`
   background: linear-gradient(
@@ -143,14 +142,14 @@ export const Background = styled.div`
   background-size: cover;
   text-align: center;
   background-position: center center;
-`
+`;
 
 export const Carousel = styled.p`
   margin: 0;
   padding-bottom: 3em;
   font-weight: lighter;
   font-size: 2rem;
-`
+`;
 
 export const Content = styled.div`
   @media (min-width: 600px) {
@@ -161,7 +160,7 @@ export const Content = styled.div`
     justify-content: center;
     align-items: flex-start;
   }
-`
+`;
 
 export const ContentWrapper = styled.div`
   min-height: 80vh;
@@ -169,7 +168,7 @@ export const ContentWrapper = styled.div`
   > #Who {
     margin-top: 10%;
   }
-`
+`;
 
 export const MeWrapper = styled.div`
   min-height: 100vh;
@@ -177,7 +176,7 @@ export const MeWrapper = styled.div`
   @media (min-width: 600px) {
     display: flex;
   }
-`
+`;
 
 export const Name = styled.h1`
   z-index: 10;
@@ -195,7 +194,7 @@ export const Name = styled.h1`
     text-align: center;
     padding-right: 40%;
   }
-`
+`;
 export const Profile = styled.img`
   min-width: auto;
   max-width: 200px;
@@ -207,7 +206,7 @@ export const Profile = styled.img`
 
     max-height: 362;
   }
-`
+`;
 
 export const ProfileWrapper = styled.div`
   @media (min-width: 600px) {
@@ -218,7 +217,7 @@ export const ProfileWrapper = styled.div`
     align-content: flex-end;
     align-items: center;
   }
-`
+`;
 
 export const TextWrapper = styled.div`
   @media (min-width: 600px) {
@@ -230,4 +229,4 @@ export const TextWrapper = styled.div`
     justify-content: center;
     flex-wrap: wrap;
   }
-`
+`;

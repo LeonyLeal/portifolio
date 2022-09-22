@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 //Styles
 const InOut = keyframes`
@@ -15,7 +15,7 @@ const InOut = keyframes`
        z-index: 1;
        border-radius:1em;
    }
-   `
+   `;
 
 const OutIn = keyframes`
     0%{
@@ -29,7 +29,7 @@ const OutIn = keyframes`
         width: 6em;
         border-radius: 50%;
     }
-    `
+    `;
 
 const FadeIn = keyframes`
    0%{
@@ -39,7 +39,7 @@ const FadeIn = keyframes`
    opacity: 1;
    transform: translate(0, -1em)
    }
-   `
+   `;
 
 const FadeOut = keyframes`
    0%{
@@ -48,7 +48,7 @@ const FadeOut = keyframes`
    100%{
    transform: translate(0);
    }
-   `
+   `;
 
 export const Container = styled.div`
   display: flex;
@@ -61,9 +61,8 @@ export const Container = styled.div`
   z-index: 1;
   margin: 3em 0.7em;
   border-radius: 1em;
-  border: 2px solid ${props => props.theme.colors.secondary};
-  background: url(${(props) => props.wave}) no-repeat bottom center,
-   #202020;
+  border: 2px solid ${(props) => props.theme.colors.secondary};
+  background: url(${(props) => props.wave}) no-repeat bottom center, #202020;
 
   :hover {
     > #background {
@@ -76,7 +75,7 @@ export const Container = styled.div`
       animation: ${FadeIn} 300ms forwards;
     }
   }
-`
+`;
 
 export const Circle = styled.div`
   margin-top: 2em;
@@ -86,7 +85,7 @@ export const Circle = styled.div`
   z-index: 1;
   animation: ${OutIn} 300ms forwards;
   background: ${(props) => props.card_fill};
-`
+`;
 
 export const Svg = styled.div`
   position: absolute;
@@ -96,19 +95,18 @@ export const Svg = styled.div`
   border-radius: 100%;
   z-index: 1;
   animation: ${FadeOut} 300ms forwards;
-  background: url(${(props) => props.icon}) no-repeat center center,
-    #151515;
+  background: url(${(props) => props.icon}) no-repeat center center, #151515;
   box-shadow: 0px 0px 5px 4px ${(props) => props.shadow};
-`
+`;
 
 export const Description = styled.p`
   position: absolute;
   margin: 15em 0;
   max-width: 15em;
   border-radius: 5px;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   color: #f2f2f2;
   z-index: 100;
   text-align: center;
   user-select: none;
-`
+`;
